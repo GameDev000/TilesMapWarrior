@@ -21,7 +21,7 @@ public class PlayerMoverByTile : KeyboardMover
     [SerializeField] Sprite boatSprite = null;
     [SerializeField] Sprite horseSprite = null;
     [SerializeField] Sprite axeSprite = null;
-    
+
     [Header("Axe destroy settings")]
     [SerializeField] AllowedTiles axeBreakableTiles = null;
     [SerializeField] TileBase grassTile = null;
@@ -42,7 +42,7 @@ public class PlayerMoverByTile : KeyboardMover
         return tilemap.GetTile(cellPosition);
     }
 
-        private AllowedTiles CurrentAllowedTiles
+    private AllowedTiles CurrentAllowedTiles
     {
         get
         {
@@ -70,7 +70,7 @@ public class PlayerMoverByTile : KeyboardMover
         UpdateVisual();
     }
 
-     private void UpdateVisual()
+    private void UpdateVisual()
     {
         if (spriteRenderer == null)
             return;
@@ -110,7 +110,7 @@ public class PlayerMoverByTile : KeyboardMover
         if (tileOnNewPosition != null && CurrentAllowedTiles != null && CurrentAllowedTiles.Contains(tileOnNewPosition))
         {
             transform.position = newPosition;
-           
+        
             if (mode == PlayerMode.OnAxe && axeBreakableTiles != null && grassTile != null)
             {
                 if (axeBreakableTiles.Contains(tileOnNewPosition))

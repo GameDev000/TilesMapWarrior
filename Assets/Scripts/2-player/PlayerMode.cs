@@ -1,6 +1,6 @@
 public enum PlayerMode
 {
-    OnFoot, 
+    OnFoot,
     OnBoat,
     OnHorse,
     OnAxe
