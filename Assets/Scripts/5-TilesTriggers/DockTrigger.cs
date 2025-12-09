@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DockTrigger : MonoBehaviour
 {
-    [SerializeField] bool setToFoot = true; 
+    [SerializeField] bool setToFoot = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

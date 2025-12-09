@@ -109,7 +109,7 @@ public class PlayerMoverByTile : KeyboardMover
 
         if (tileOnNewPosition != null && CurrentAllowedTiles != null && CurrentAllowedTiles.Contains(tileOnNewPosition))
         {
-            transform.position = newPosition;       
+            transform.position = newPosition;
             if (mode == PlayerMode.OnAxe && axeBreakableTiles != null && grassTile != null)
             {
                 if (axeBreakableTiles.Contains(tileOnNewPosition))
